@@ -34,7 +34,7 @@ instead.
 
 ## Usage
 
-To use the plugin's functionality, you will need to add the its binary artifact to your build script's classpath and apply the plugin.
+To use the plugin's functionality, you will need to add the binary artifact to your build script's classpath and apply the plugin.
 
 ### Adding the plugin binary to the build
 
@@ -80,7 +80,7 @@ The JAR file comes with two plugins:
 </table>
 
 The `com.bmuschko.tomcat` plugin helps you get started quickly. If you are OK if the preconfigured tasks, this is the
-preferrable option. Most plugin users will go with this option. To use the Tomcat plugin, include the following code snippet
+preferable option. Most plugin users will go with this option. To use the Tomcat plugin, include the following code snippet
 in your build script:
 
     apply plugin: 'com.bmuschko.tomcat'
@@ -241,7 +241,7 @@ Note: `keystoreFile` and `truststoreFile` each require an instance of a `File` o
 
 ### Example
 
-In the following example code, wes declare a custom context file for the task `tomcatRun`.
+In the following example code, we declare a custom context file for the task `tomcatRun`.
 
 ```groovy
 tomcatRun.configFile = file('context.xml')
@@ -261,7 +261,7 @@ To configure the Jasper compiler task you can choose to set the following proper
 * `compilerSourceVM`: What JDK version are the source files compatible with (defaults to `1.6`).
 * `compilerTargetVM`: What JDK version are the generated files compatible with (defaults to `1.6`).
 * `poolingEnabled`: Determines whether tag handler pooling is enabled. This is a compilation option. It will not alter the behaviour of JSPs that have already been compiled (defaults to `true`).
-* `errorOnUseBeanInvalidClassAttribute`: Should Jasper issue an error when the value of the class attribute in an useBean action is not a valid bean class (defaults to `true`).
+* `errorOnUseBeanInvalidClassAttribute`: Should Jasper issue an error when the value of the class attribute in an `useBean` action is not a valid bean class (defaults to `true`).
 * `genStringAsCharArray`: Should text strings be generated as char arrays, to improve performance in some cases (defaults to `false`).
 * `ieClassId`: The class-id value to be sent to Internet Explorer when using `<jsp:plugin>` tags (defaults to `clsid:8AD9C840-044E-11D1-B3E9-00805F499D93`).
 * `javaEncoding`: Java file encoding to use for generating java source files (defaults to `UTF8`).
@@ -396,7 +396,7 @@ Reloading Context with name [/myapp] has started
 Reloading Context with name [/myapp] is completed
 ```
 
-Alternatively, you can use other commericial byte code swap technologies. The configuration is usually product-specific.
+Alternatively, you can use other commercial byte code swap technologies. The configuration is usually product-specific.
 Please refer to the product's documentation on how to set it up for your project. The following section describes how to set up Gradle and the plugin with [JRebel](http://zeroturnaround.com/jrebel/).
 First of all download [JRebel](http://zeroturnaround.com/jrebel/current/), install it on your machine and set up the [license](http://zeroturnaround.com/reference-manual/install.html#install-1.3).
 To tell JRebel which directory to scan for changed byte code you need to create a [rebel.xml](file://localhost/Users/benjamin/dev/tools/jrebel/doc/app.html#app) file. In
